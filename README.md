@@ -18,9 +18,7 @@ Please follow the guide carefully.
     <script src="https://timtermtube.github.io/sil-production/sil.js"/> <- This is only way what can use SIL.js.
   </head>
   
-  <body> 
-    Anything...
-  </body>
+  <body></body>
 </html>
 
 ```
