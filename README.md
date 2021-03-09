@@ -7,7 +7,8 @@ It means thread and also light as "Sil".
 Sil (Korean: 실) means "thread" in English. and also, the English Word "thread" is light thing.
 
 # Warning before to begin
-**SIL.JS is not support "import" syntax and webpack base system.**
+SIL.js don't support to use on webpack base frameworks natively.
+Please follow the guide carefully.
 
 # How to load?
 ```html
