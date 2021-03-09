@@ -15,7 +15,7 @@ Please follow the guide carefully.
 <!DOCYTPE HTML>
 <html>
   <head> 
-    <script src="sil.js"/> <- This is only way what can use SIL.js.
+    <script src="https://timtermtube.github.io/sil-production/sil.js"/> <- This is only way what can use SIL.js.
   </head>
   
   <body> 
