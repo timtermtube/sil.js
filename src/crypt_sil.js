@@ -20,8 +20,5 @@ function decrypt(array) {
     return string;
 }
 
-exports.default = {
-    encrypt,
-    decrypt
-}
+module.exports = { encrypt, decrypt }
 
