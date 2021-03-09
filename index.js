@@ -1,7 +1,8 @@
 const { encrypt, decrypt } = require("./src/crypt_sil");
 const { SIL } = require("./src/sil_core");
 
-const ProjectName = "SILX"
+const ProjectName = "SILX"; /* For Web */
+var SILX;
 
 (function() {
     let wd;
@@ -65,8 +66,8 @@ const ProjectName = "SILX"
                     }
                 }
             }
-    
-            window[ProjectName] = __;
+            
+            SILX = __;
             console.warn(`[${ProjectName}] [Warning] The Window API is not working in the Thread Functions. For Instead of it, Change as window -> self.`)
         }
         catch (e) {
