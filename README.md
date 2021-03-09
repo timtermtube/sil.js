@@ -1,6 +1,6 @@
 # sil.js
 **SImple muLti-thread launcher in JavaScript, SIL.** 
-Simple Multi-threading Launcher with JS in Web. Simpler, and Faster.
+Simple Multi-threading Launcher for Web. Simpler, and Faster.
 
 # What is the origin of name?
 It means thread and also light as "Sil". 
