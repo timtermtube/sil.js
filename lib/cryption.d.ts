@@ -1,5 +1,7 @@
 declare module "cryption" {
-    export function encrypt(string: string): Array<Number>;
+    function encrypt(string: string): Array<Number>;
     
-    export function decrypt(array: Array<Number>): string;
+    function decrypt(array: Array<Number>): string;
+
+    export default {encrypt, decrypt};
 }
