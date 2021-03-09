@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "typeRoots": ["./@type"],
     "target": "es6",                               
     "strict": true,                                 
     "skipLibCheck": false,                           
