@@ -1,5 +1,5 @@
 # sil.js
-**SImple muLti-threading launcher in javascript, SIL.** 
+**SImple muLti-thread launcher in javascript, SIL.** 
 Simple Multi-threading Launcher with JS in Web. Simpler, and Faster.
 
 # What is the origin of name?
