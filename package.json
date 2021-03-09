@@ -2,8 +2,7 @@
   "name": "multi-threading",
   "version": "1.0.0",
   "description": "The simple multi-threading helper in the Web Environments",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "lib/index.js",
   "scripts": {},
   "keywords": [
     "worker",
