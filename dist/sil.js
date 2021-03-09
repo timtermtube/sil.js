@@ -65,7 +65,7 @@
             const WorkerScript = document.currentScript.src;
             const Threads = [];
 
-            class Sil {
+            class SIL {
                 constructor(scriptsrc, working, name="WorkingAnt", params=[]) {
                     this.__worker = new Worker(scriptsrc);
                     this.name = name;
@@ -112,7 +112,7 @@
                 newThread: function(method, name="WorkingAnt", params=[]) {
                     if (typeof method == "function") {
                         // Working
-                        let T = new Thread(this._getWorkerScriptPath(), method, name, params);
+                        let T = new SIL(this._getWorkerScriptPath(), method, name, params);
                         Threads.push(T);
                         return T;
                     }
