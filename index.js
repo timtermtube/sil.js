@@ -1,1 +1,1 @@
-const { encrypt, decrypt } = require("./lib/cryption");
+const cryption = require("cryption")
