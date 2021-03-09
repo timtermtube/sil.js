@@ -1,2 +1,2 @@
-const {encrypt, decrypt} = require("SILCryption")
+const { encrypt, decrypt } = require("SILCryption");
 
