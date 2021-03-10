@@ -7,7 +7,6 @@ declare module "SIL" {
         newThread(method: VoidFunction, name: string, params: Array<any>): SIL;
     }
 
-    const ProjectName: string;
     var SILX: SIL_RunningClass;
 
     export default SILX;

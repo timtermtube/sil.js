@@ -37,4 +37,4 @@ class SIL {
     }
 }
 
-module.exports = { SIL };
+export { SIL };

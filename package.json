@@ -4,6 +4,7 @@
   "description": "The simple multi-threading helper in the Web Environments",
   "main": "index.js",
   "types": "index.d.ts",
+  "type": "module",
   "scripts": {},
   "keywords": [
     "worker",

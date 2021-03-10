@@ -1,8 +1,8 @@
-const { encrypt, decrypt } = require("./src/crypt_sil");
-const { SIL } = require("./src/sil_core");
-
+import {encrypt, decrypt} from "./src/crypt_sil.js"
+import {SIL} from "./src/sil_core.js"
+import {Worker} from "worker_threads"
 const ProjectName = "SILX"; /* For Web */
-var SILX;
+var self = {};
 
 (function() {
     let wd;
@@ -15,7 +15,7 @@ var SILX;
         wd = false;
     }
     
-    if (!wd) {
+    if (false) {
         // Worker Client
         self.__Worker = true;
         self.send = (data) => {
@@ -67,15 +67,41 @@ var SILX;
                 }
             }
             
-            SILX = __;
+            self.SILX = __;
             console.warn(`[${ProjectName}] [Warning] The Window API is not working in the Thread Functions. For Instead of it, Change as window -> self.`)
         }
         catch (e) {
             // Loading Error
             const _ERRCASE = !Worker;
+            console.log(import.meta.url)
             if (_ERRCASE) {
                 console.error(`This browser doesn't support ${ProjectName}.`);
+                console.error(e)
             }
         }
     }
 })();
+
+let md = true
+
+try {
+   let __TEMP = module;
+   md = true;
+}
+catch (_e) {
+    const ERR = String(_e);
+    console.log(ERR=="ReferenceError: module is not defined")
+    md = false;
+}
+
+try {
+    let __TEMP = import.meta.url;
+    md = true;
+ }
+ catch (_e) {
+     console.log(_e)
+     const ERR = String(_e);
+     console.log(ERR=="ReferenceError: module is not defined")
+     md = false;
+ }
+

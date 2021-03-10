@@ -1,3 +1,5 @@
+
+
 (function() {
     const ProjectName = "Sil.js"
     function encrypt(string) {

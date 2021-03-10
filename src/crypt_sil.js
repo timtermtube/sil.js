@@ -1,3 +1,5 @@
+console.log(1)
+
 function encrypt(string) {
     const array = [];
 
@@ -20,5 +22,5 @@ function decrypt(array) {
     return string;
 }
 
-module.exports = { encrypt, decrypt }
+export { encrypt, decrypt }
 
