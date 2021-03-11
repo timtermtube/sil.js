@@ -4,11 +4,7 @@ Simple Multi-threading Launcher for Web. Simpler, and Faster.
 
 # What is the origin of name?
 It means thread and also light as "Sil". 
-Sil (Korean: 실) means "thread" in English. and also, the English Word "thread" is light thing.
-
-# Warning before to begin
-SIL.js don't support to use on webpack base frameworks natively.
-Please follow the guide carefully.
+Sil (Korean: 실) means "thread" in English.1
 
 # How to load?
 on webpack-base Project:
@@ -20,3 +16,5 @@ on webpack-base Project:
   /* ... */ 
 ```
 
+# Guides
+https://github.com/timtermtube/sil.js/wiki
