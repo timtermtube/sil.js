@@ -1,4 +1,4 @@
-console.log(1)
+/* Silcrypt */
 
 function encrypt(string) {
     const array = [];
@@ -22,5 +22,7 @@ function decrypt(array) {
     return string;
 }
 
-export { encrypt, decrypt }
-
+export {
+    encrypt, 
+    decrypt
+};

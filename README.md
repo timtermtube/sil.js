@@ -11,15 +11,12 @@ SIL.js don't support to use on webpack base frameworks natively.
 Please follow the guide carefully.
 
 # How to load?
-```html
-<!DOCYTPE HTML>
-<html>
-  <head> 
-    <script src="https://timtermtube.github.io/sil-production/sil.js"/> <- This is only way what can use SIL.js.
-  </head>
-  
-  <body></body>
-</html>
+on webpack-base Project:
+```javascript
+  /* ... */
+  import SIL from "sil.js" /* ES6 */
+  const SIL = require("sil.js"); /* CommonJS */ 
 
+  /* ... */ 
 ```
 

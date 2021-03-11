@@ -1,11 +1,17 @@
 {
-  "name": "multi-threading",
+  "name": "sil.js",
   "version": "1.0.0",
-  "description": "The simple multi-threading helper in the Web Environments",
+  "description": "Simple Multi-thread launcher in JavaScript",
   "main": "index.js",
-  "types": "index.d.ts",
   "type": "module",
+  "types": "index.d.ts",
   "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timtermtube/sil.js.git"
+  },
+  "author": "timtermtube",
+  "license": "MIT",
   "keywords": [
     "worker",
     "webworker",
@@ -17,6 +23,8 @@
     "multi core",
     "multi threading"
   ],
-  "author": "timtermtube",
-  "license": "MIT"
+  "bugs": {
+    "url": "https://github.com/timtermtube/sil.js/issues"
+  },
+  "homepage": "https://github.com/timtermtube/sil.js#readme"
 }

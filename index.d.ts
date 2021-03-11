@@ -1,13 +1,9 @@
-declare module "SIL" {
-    import { encrypt, decrypt } from "SILCryption";
-    import { SIL } from "SIL_Core";
+declare module "sil.js" {
+    import { SILSupport } from "SIL_Support"
+    import { SIL } from "SIL_Core"
 
-    interface SIL_RunningClass {
-        _getWorkerScriptPath(): string;
-        newThread(method: VoidFunction, name: string, params: Array<any>): SIL;
-    }
+    const THREADS: Array<SIL>;
+    const __: object;
 
-    var SILX: SIL_RunningClass;
-
-    export default SILX;
+    export default __;
 }
