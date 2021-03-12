@@ -1,5 +1,7 @@
 /* ThreadWorker */
 
+import { encrypt, decrypt } from "./SilCrypt"
+
 const ThreadWorker = (function(){
     self.__Worker = true;
     self.send = (data) => {
