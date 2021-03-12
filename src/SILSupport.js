@@ -24,7 +24,7 @@ function SILSupport() {
         }
         try {
             let __TEMP = window.Blob;
-            PASS.Blob= true;
+            PASS.Blob = true;
         }
         catch (e) {
             PASS.Blob = false;
