@@ -24,7 +24,7 @@ class SIL {
             }
         }
         const _FUNC = func.toString();
-        const newFunction = "";
+        let newFunction = "";
         for (var i=0; i<_FUNC.length; i++) {
             let v = _FUNC[i];
             if (v == `"`) {
