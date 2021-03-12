@@ -1,5 +1,5 @@
 {
-  "name": "sil.js",
+  "name": "siljs",
   "version": "0.0.1",
   "description": "Simple Multi-thread launcher in JavaScript",
   "main": "index.js",
