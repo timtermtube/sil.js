@@ -1,5 +1,5 @@
 # sil.js
-<img src="https://img.shields.io/npm/v/sil.js?style=flat-square"></img>
+<img src="https://img.shields.io/npm/v/sil.js?style=flat-square"/>
 **SImple muLti-thread launcher in JavaScript, SIL.** 
 Simple Multi-threading Launcher for Web. Simpler, and Faster.
 
