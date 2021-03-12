@@ -4,7 +4,7 @@ import { encrypt, decrypt } from "./SilCrypt"
 
 class SIL {
     constructor(func, name="WorkingAnt", params=[], number=0) {
-        const BLOB = new Blob([`${ThreadWorker.toString()}()`], {
+        const BLOB = new Blob([`(${ThreadWorker.toString()})()`], {
             type: "application/javascript"
         });
         this.__TEMPURL = URL.createObjectURL(BLOB);
