@@ -10,24 +10,24 @@ function SILSupport() {
         let __TEMP = window;
         PASS.Window = true;
     }
-    catch {
+    catch (e) {
         PASS.Window = false;
     }
 
     if (PASS.Window) {
         try {
             let __TEMP = window.Worker;
-            PASS.Window = true;
+            PASS.Worker = true;
         }
-        catch {
-            PASS.Window = false;
+        catch (e) {
+            PASS.Worker = false;
         }
         try {
             let __TEMP = window.Blob;
-            PASS.Window = true;
+            PASS.Blob= true;
         }
-        catch {
-            PASS.Window = false;
+        catch (e) {
+            PASS.Blob = false;
         }
     }
     else {
