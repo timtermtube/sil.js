@@ -13,8 +13,9 @@ on webpack-base Project:
 ```javascript
   /* ... */
   import SIL from "sil.js" /* ES6 */
-  const SIL = require("sil.js"); /* CommonJS */ 
-
+  const SIL = require("sil.js").default; /* CommonJS */ 
+  
+  const myThread = SIL.newThread((a) => {console.log(a+a**2)}, "WorkingAnt", [15]);
   /* ... */ 
 ```
 
