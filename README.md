@@ -1,6 +1,7 @@
 # sil.js
 <p align="left"><img src="https://img.shields.io/npm/v/sil.js?style=flat-square"/></p>
-**SImple muLti-thread launcher in JavaScript, SIL.** 
+
+<h2>SImple muLti-thread launcher in JavaScript, SIL.</h2>
 Simple Multi-threading Launcher for Web. Simpler, and Faster.
 
 # What is the origin of name?
