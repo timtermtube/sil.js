@@ -34,7 +34,7 @@ function twFunctions() {
         self.postMessage(encrypt(`{"method": "beReturned", "threadCode": ${self.__Tnumber}, "data": ${String(data)}}`));
     };
     self.onmessage = (ev) => {
-        let data = JSON.parse(decrypt(ev.data));
+        let data = self.JSON.parse(decrypt(ev.data));
     };
 }
 
@@ -44,9 +44,9 @@ function ThreadWorker(func, params=[], tNumber=0) {
     if (typeof func == "function") {
         these.__BASERUNNER__ = `(${twFunctions.toString()})(); self.__Tnumber=${tNumber};`
         these.__FUNCTION__ = `function __RUN__(arrayParameters=[]) { 
-            const RD = (${func.toString()})(${params.toString()}); 
+            const RD = (${func.toString()})(...${self.JSON.stringify(params)}); 
             if (RD) {
-                self.beReturned(JSON.stringify(RD));
+                self.beReturned(self.JSON.stringify(RD));
                 self.selfKill();
             }
         }; 
