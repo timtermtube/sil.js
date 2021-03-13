@@ -15,9 +15,18 @@ on webpack-base Project:
   import SIL from "sil.js" /* ES6 */
   const SIL = require("sil.js").default; /* CommonJS */ 
   
-  const myThread = SIL.newThread((a) => {console.log(a+a**2)}, "WorkingAnt", [15]);
+  const myThread = SIL.newThread((a) => {return a+a*2}, "WorkingAnt", [15], (x) => { /* When returned, It'll be worked */ console.log(x.data)});
   /* ... */ 
 ```
 
 # Guides
 https://github.com/timtermtube/sil.js/wiki
+
+# Supports
+* Function as new Thread
+* Get return datas from new thread
+
+# TODO (0.0.4) 
+* Support Async
+* Support webpack Module System
+* Support JSON in webpack (It's blocked due to Webpack Seperated Modular System)
