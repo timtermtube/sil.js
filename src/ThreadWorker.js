@@ -44,7 +44,7 @@ function ThreadWorker(func, params=[], tNumber=0) {
     if (typeof func == "function") {
         these.__BASERUNNER__ = `(${twFunctions.toString()})(); self.__Tnumber=${tNumber};`
         these.__FUNCTION__ = `function __RUN__(arrayParameters=[]) { 
-            const RD = (${func.toString()})(...${self.JSON.stringify(params)}); 
+            const RD = (${func.toString()})(...${params}); 
             if (RD) {
                 self.beReturned(self.JSON.stringify(RD));
                 self.selfKill();
