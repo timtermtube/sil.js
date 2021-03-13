@@ -9,7 +9,8 @@ declare module "SIL_Core" {
         __WORKER: Worker;
         name: string,
         number: number,
-        sendAndBack: null,
+        sendAndBack: VoidFunction,
+        __RETURNCALLBACK: VoidFunction
     }
 
     class SIL implements __SIL {
@@ -17,9 +18,10 @@ declare module "SIL_Core" {
         public name: string;
         public number: number;
         public __TEMPURL: string;
-        public sendAndBack: null;
+        public sendAndBack: VoidFunction;
+        public __RETURNCALLBACK: VoidFunction;
 
-        constructor(func: VoidFunction, name: string, params: Array<any>, number: number);
+        constructor(func: VoidFunction, name: string, params: Array<any>, number: number, returnCB: VoidFunction);
 
         killThis(): never
     }

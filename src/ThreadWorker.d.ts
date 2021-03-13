@@ -1,7 +1,7 @@
 /* ThreadWorker */
 
 declare module "SIL_ThreadWorker" {
-    const ThreadWorker: VoidFunction;
+    function ThreadWorker(func: VoidFunction, params: Array<any>, tNumber: number): string
 
     export {
         ThreadWorker
