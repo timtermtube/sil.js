@@ -4,7 +4,7 @@ import { encrypt, decrypt } from "./SilCrypt"
 
 class SIL {
     constructor(func, name="WorkingAnt", params=[], number=0) {
-        const BLOB = new Blob([`(${ThreadWorker.toString()})()`], {
+        const BLOB = new Blob([ThreadWorker(func, params)], {
             type: "application/javascript"
         });
         this.__TEMPURL = URL.createObjectURL(BLOB);
@@ -23,24 +23,6 @@ class SIL {
                 }
             }
         }
-        const _FUNC = func.toString();
-        let newFunction = "";
-        for (var i=0; i<_FUNC.length; i++) {
-            let v = _FUNC[i];
-            if (v == `"`) {
-                newFunction += '\\"';
-            }
-            else {
-                newFunction += v;
-            }
-        }
-        this.__WORKER.postMessage(
-            encrypt(`{
-                "method": "do", 
-                "threadCode": ${this.number}, 
-                "function": "${newFunction}", 
-                "params": ${JSON.stringify(params)}
-            }`));
     }
     killThis() {
         this.__WORKER.terminate();

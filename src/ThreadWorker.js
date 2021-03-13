@@ -1,6 +1,6 @@
 /* ThreadWorker */
 
-const ThreadWorker = (function(){
+function twFunctions() {
     function encrypt(string) {
         const array = [];
     
@@ -22,6 +22,7 @@ const ThreadWorker = (function(){
         }
         return string;
     }
+
     self.__Worker = true;
     self.send = (data) => {
         self.postMessage(encrypt(`{"method": "send", "threadCode": ${self.__Tnumber}, "data": ${String(data)}}`));
@@ -31,24 +32,21 @@ const ThreadWorker = (function(){
     };
     self.onmessage = (ev) => {
         let data = JSON.parse(decrypt(ev.data));
-        self.__Tnumber = data["threadCode"];
-        let Parameters = "";
-
-        if (data["method"] == "do") {
-            for (var i=0; i<data["params"].length; i++) {
-                let v = data["params"][i];
-                if (i == data["params"].length-1) {
-                    Parameters += v;
-                }
-                else {
-                    Parameters += v+", ";
-                }
-            }
-            const RunnedFunc = new Function(`const x = ${data["function"]}; return x(${Parameters});`);
-            RunnedFunc();
-        }
     };
-});
+}
+
+function ThreadWorker(func, params=[]) {
+    const these = {};
+
+    if (typeof func == "function") {
+        these.__BASERUNNER__ = `(${twFunctions.toString()})();`
+        these.__FUNCTION__ = `function __RUN__(arrayParameters=[]) { return (${func.toString()})(${params.toString()}); } `
+        these.result = `${these.__BASERUNNER__}${these.__FUNCTION__}`
+    }
+    else {
+        return these;
+    }
+}
 
 export {
     ThreadWorker
