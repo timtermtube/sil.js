@@ -21,3 +21,12 @@ on webpack-base Project:
 
 # Guides
 https://github.com/timtermtube/sil.js/wiki
+
+# Supports
+* Function as new Thread
+* Get return datas from new thread
+
+# TODO (0.0.4) 
+* Support Async
+* Support webpack Module System
+* Support JSON in webpack (It's blocked due to Webpack Seperated Modular System)
