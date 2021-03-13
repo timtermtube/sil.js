@@ -46,6 +46,8 @@ function ThreadWorker(func, params=[]) {
     else {
         return these;
     }
+
+    return these;
 }
 
 export {
