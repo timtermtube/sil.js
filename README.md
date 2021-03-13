@@ -15,7 +15,7 @@ on webpack-base Project:
   import SIL from "sil.js" /* ES6 */
   const SIL = require("sil.js").default; /* CommonJS */ 
   
-  const myThread = SIL.newThread((a) => {console.log(a+a**2)}, "WorkingAnt", [15]);
+  const myThread = SIL.newThread((a) => {return a+a*2}, "WorkingAnt", [15], (x) => { /* When returned, It'll be worked */ console.log(x.data)});
   /* ... */ 
 ```
 
