@@ -1,5 +1,5 @@
-import { SILSupport } from "./src/SILSupport"
-import { SIL } from "./src/SIL"
+import { SILSupport } from "./src/SILSupport.js"
+import { SIL } from "./src/SIL.js"
 
 const THREADS = [];
 const __ = {};

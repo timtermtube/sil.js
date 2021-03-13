@@ -1,6 +1,6 @@
 /* Sil = Thread */
-import { ThreadWorker } from "./ThreadWorker";
-import { encrypt, decrypt } from "./SilCrypt"
+import { ThreadWorker } from "./ThreadWorker.js";
+import { encrypt, decrypt } from "./SilCrypt.js"
 
 class SIL {
     constructor(func, name="WorkingAnt", params=[], number=0, returnCB=()=>{}) {
