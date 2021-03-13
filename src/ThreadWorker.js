@@ -51,7 +51,8 @@ function ThreadWorker(func, params=[], tNumber=0) {
             }
         }; 
         __RUN__(); `
-        these.result = `${these.__BASERUNNER__}\n${these.__FUNCTION__}`
+        these.configSetters = `const JSON = self.JSON;`
+        these.result = `${these.configSetters} ${these.__BASERUNNER__}\n${these.__FUNCTION__}`
     }
     else {
         return these.result;
