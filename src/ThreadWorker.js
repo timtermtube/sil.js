@@ -40,8 +40,8 @@ function ThreadWorker(func, params=[]) {
 
     if (typeof func == "function") {
         these.__BASERUNNER__ = `(${twFunctions.toString()})();`
-        these.__FUNCTION__ = `function __RUN__(arrayParameters=[]) { return (${func.toString()})(${params.toString()}); } `
-        these.result = `${these.__BASERUNNER__}${these.__FUNCTION__}`
+        these.__FUNCTION__ = `function __RUN__(arrayParameters=[]) { return (${func.toString()})(${params.toString()}); }; __RUN__(); `
+        these.result = `${these.__BASERUNNER__}\n${these.__FUNCTION__}`
     }
     else {
         return false;
