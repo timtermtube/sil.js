@@ -30,4 +30,3 @@ https://github.com/timtermtube/sil.js/wiki
 # TODO (0.0.4) 
 * Support Async
 * Support webpack Module System
-* Support JSON in webpack (It's blocked due to Webpack Seperated Modular System)
