@@ -6,9 +6,9 @@ const __ = {};
 
 if (SILSupport()) {
     __.THREADS = THREADS;
-    __.newThread = (func, name="WorkingAnt", params=[]) => {
+    __.newThread = (func, name="WorkingAnt", params=[], return_callback=()=>{}) => {
         if (typeof func == "function") {
-            const T = new SIL(func, name, params, THREADS.length);
+            const T = new SIL(func, name, params, THREADS.length, return_callback);
             THREADS.push(T);
             return T;
         }

@@ -30,23 +30,32 @@ function twFunctions() {
     self.selfKill = (data) => {
         self.postMessage(encrypt(`{"method": "selfkill", "threadCode": ${self.__Tnumber}}`))
     };
+    self.beReturned = (data) => {
+        self.postMessage(encrypt(`{"method": "beReturned", "threadCode": ${self.__Tnumber}, "data": ${String(data)}}`));
+    };
     self.onmessage = (ev) => {
         let data = JSON.parse(decrypt(ev.data));
     };
 }
 
-function ThreadWorker(func, params=[]) {
+function ThreadWorker(func, params=[], tNumber=0) {
     const these = {};
 
     if (typeof func == "function") {
-        these.__BASERUNNER__ = `(${twFunctions.toString()})();`
-        these.__FUNCTION__ = `function __RUN__(arrayParameters=[]) { return (${func.toString()})(${params.toString()}); }; __RUN__(); `
+        these.__BASERUNNER__ = `(${twFunctions.toString()})(); self.__Tnumber=${tNumber};`
+        these.__FUNCTION__ = `function __RUN__(arrayParameters=[]) { 
+            const RD = (${func.toString()})(${params.toString()}); 
+            if (RD) {
+                self.beReturned(JSON.stringify(RD));
+                self.selfKill();
+            }
+        }; 
+        __RUN__(); `
         these.result = `${these.__BASERUNNER__}\n${these.__FUNCTION__}`
     }
     else {
-        return false;
+        return these.result;
     }
-
     return these.result;
 }
 

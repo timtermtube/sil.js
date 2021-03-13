@@ -3,15 +3,13 @@ import { ThreadWorker } from "./ThreadWorker";
 import { encrypt, decrypt } from "./SilCrypt"
 
 class SIL {
-    constructor(func, name="WorkingAnt", params=[], number=0) {
-        const BLOB = new Blob([ThreadWorker(func, params)], {
+    constructor(func, name="WorkingAnt", params=[], number=0, returnCB=()=>{}) {
+        const BLOB = new Blob([ThreadWorker(func, params, number)], {
             type: "application/javascript"
         });
         this.__TEMPURL = URL.createObjectURL(BLOB);
         this.__WORKER = new Worker(this.__TEMPURL);
-        this.name = name;
-        this.number = number;
-        this.sendAndBack = null;
+        this.__RETURNCALLBACK = returnCB;
         this.__WORKER.onmessage = (ms) => {
             const DATA = JSON.parse(decrypt(ms.data));
             if (DATA["method"] == "selfkill") {
@@ -22,7 +20,16 @@ class SIL {
                     this.sendAndBack(data);
                 }
             }
+            else if (DATA["method"] == "beReturned") {
+                if (typeof this.__RETURNCALLBACK == "function") {
+                    this.__RETURNCALLBACK(DATA);
+                }
+            }
         }
+        this.name = name;
+        this.number = number;
+        this.sendAndBack = null;
+        this.onreturned = null;
     }
     killThis() {
         this.__WORKER.terminate();
