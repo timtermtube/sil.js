@@ -13,6 +13,7 @@ on webpack-base Project:
 ```javascript
   /* ... */
   import SIL from "sil.js" /* ES6 */
+  import SIL from "https://timtermtube.github.io/sil.js/index.js" /* module tag in html */
   const SIL = require("sil.js").default; /* CommonJS */ 
   
   const myThread = SIL.newThread((a) => {return a+a*2}, "WorkingAnt", [15], (x) => { /* When returned, It'll be worked */ console.log(x.data)});
