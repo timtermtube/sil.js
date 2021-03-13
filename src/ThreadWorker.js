@@ -44,10 +44,10 @@ function ThreadWorker(func, params=[]) {
         these.result = `${these.__BASERUNNER__}${these.__FUNCTION__}`
     }
     else {
-        return these;
+        return false;
     }
 
-    return these;
+    return these.result;
 }
 
 export {
