@@ -1,4 +1,4 @@
-declare module "sil.js" {
+declare module "siljs" {
     import { SILSupport } from "SIL_Support"
     import { SIL } from "SIL_Core"
 
