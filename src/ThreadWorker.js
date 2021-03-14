@@ -44,13 +44,13 @@ function ThreadWorker(func, params=[], tNumber=0) {
     if (typeof func == "function") {
         these.__BASERUNNER__ = `(${twFunctions.toString()})(); self.__Tnumber=${tNumber};`
         these.__FUNCTION__ = `function __RUN__(arrayParameters=[]) { 
-            const RD = (${func.toString()})(...${params}); 
+            const RD = (${func.toString()})(...arrayParameters); 
             if (RD) {
                 self.beReturned(self.JSON.stringify(RD));
                 self.selfKill();
             }
         }; 
-        __RUN__(); `
+        __RUN__([${params}]); `
         these.configSetters = `const JSON = self.JSON;`
         these.result = `${these.configSetters} ${these.__BASERUNNER__}\n${these.__FUNCTION__}`
     }
