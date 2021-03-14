@@ -1,6 +1,6 @@
 {
   "name": "siljs",
-  "version": "0.0.34",
+  "version": "0.0.345",
   "description": "Simple Multi-thread launcher in JavaScript",
   "main": "index.js",
   "type": "module",
