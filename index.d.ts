@@ -4,11 +4,11 @@ declare module "siljs" {
 
     interface Wrapper {
         THREADS: Array<SIL>;
-        newThread: VoidFunction;
+        newThread(func: Function, name: string, params: Array<any>, return_callback: Function): SIL
     }
 
     const THREADS: Array<SIL>;
-    const __: Wrapper;
+    const __: Wrapper
 
     export default __;
 }
