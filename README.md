@@ -10,7 +10,7 @@ so It's going to have many updates until v0.0.4.
 
 # What is the origin of name?
 It means thread and also light as "Sil". 
-Sil (Korean: 실) means "thread" in English.1
+Sil (Korean: 실) means "thread" in English.
 
 # How to load?
 on webpack-base Project:
