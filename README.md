@@ -4,6 +4,10 @@
 <h2>SImple muLti-thread launcher in JavaScript, SIL.</h2>
 Simple Multi-threading Launcher for Web. Simpler, and Faster.
 
+# Before to Read
+This library is going to be experimental and unstable until v0.0.4.
+so It's going to have many updates until v0.0.4.
+
 # What is the origin of name?
 It means thread and also light as "Sil". 
 Sil (Korean: 실) means "thread" in English.1
