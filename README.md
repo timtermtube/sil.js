@@ -12,9 +12,11 @@ Sil (Korean: 실) means "thread" in English.1
 on webpack-base Project:
 ```javascript
   /* ... */
-  import SIL from "siljs" /* ES6 */
-  import SIL from "https://timtermtube.github.io/sil.js/index.js" /* module tag in html */
-  const SIL = require("siljs").default; /* CommonJS */ 
+  import _SIL from "siljs" /* ES6 */
+  import _SIL from "https://timtermtube.github.io/sil.js/index.js" /* module tag in html */
+  const _SIL = require("siljs"); /* CommonJS */ 
+  
+  const SIL = _SIL.default;
   
   const myThread = SIL.newThread((a) => {return a+a*2}, "WorkingAnt", [15], (x) => { /* When returned, It'll be worked */ console.log(x.data)});
   /* ... */ 
