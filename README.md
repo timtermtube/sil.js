@@ -35,4 +35,3 @@ https://github.com/timtermtube/sil.js/wiki
 
 # TODO (0.0.4) 
 * Support Async
-* Support webpack Module System
