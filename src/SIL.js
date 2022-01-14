@@ -17,7 +17,7 @@ class SIL {
             }
             else if (DATA["method"] == "send") {
                 if (typeof this.sendAndBack == "function") {
-                    this.sendAndBack(data);
+                    this.sendAndBack(DATA);
                 }
             }
             else if (DATA["method"] == "beReturned") {
