@@ -5,8 +5,7 @@
 Simple Multi-threading Launcher for Web. Simpler, and Faster.
 
 # Before to Read
-This library is going to be experimental and unstable until v0.0.4.
-so It's going to have many updates until v0.0.4.
+Supports will be no longer provided.
 
 # What is the origin of name?
 It means thread and also light as "Sil". 
